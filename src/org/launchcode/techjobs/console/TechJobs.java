@@ -110,7 +110,26 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        Iterator var1 = someJobs.iterator();
 
-        System.out.println("printJobs is not implemented yet");
+        while(var1.hasNext()) {
+            HashMap job = (HashMap)var1.next();
+            System.out.println("**************************");
+            Iterator var3 = job.keySet().iterator();
+
+            while(var3.hasNext()) {
+                Object k = var3.next();
+                PrintStream var10000 = System.out;
+                ((PrintStream)k).println((String)job.get(k));
+            }
+
+            System.out.println("**************************");
+            System.out.println(" ");
+        }
+
+    }
+
+    static {
+        in = new Scanner(System.in);
     }
 }
